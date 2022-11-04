@@ -1,0 +1,19 @@
+.svn
+.settings
+.externalToolBuilders
+.classpath
+.class
+work
+target
+build
+node_modules
+dist
+
+.project
+.tomcatplugin
+.#webclasspath
+
+// Intellij IDEA
+.idea
+*.iml
+*.log

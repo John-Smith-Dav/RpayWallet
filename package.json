@@ -1,0 +1,51 @@
+{
+  "name": "rpay-wallet",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "app": "vue-cli-service build -a app"
+  },
+  "dependencies": {
+    "@dsb-norge/vue-keycloak-js": "^2.1.5-beta",
+    "animate.css": "^3.7.2",
+    "axios": "^0.21.1",
+    "bip39": "^3.0.2",
+    "chart.js": "^2.9.3",
+    "core-js": "^2.6.5",
+    "cors": "^2.8.5",
+    "decimal": "0.0.2",
+    "decimal.js": "^10.2.0",
+    "elliptic": "^6.5.4",
+    "hash.js": "^1.0.3",
+    "highcharts": "^8.0.0",
+    "js-base64": "^3.6.0",
+    "js-pinyin": "^0.1.9",
+    "jsencrypt": "^3.2.1",
+    "qrcode": "^1.4.4",
+    "querystring": "^0.2.1",
+    "swiper": "^5.2.1",
+    "three": "^0.128.0",
+    "vant": "^2.12.6",
+    "vue": "^2.6.10",
+    "vue-axios": "^2.1.5",
+    "vue-clipboard2": "^0.3.1",
+    "vue-i18n": "^8.15.0",
+    "vue-puzzle-vcode": "^1.1.9",
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.13.9",
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-service": "^4.5.12",
+    "babel-plugin-import": "^1.13.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "node-sass": "^4.14.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "sass-loader": "^8.0.0",
+    "vue-template-compiler": "^2.6.10",
+    "webpack-bundle-analyzer": "^3.6.0"
+  }
+}

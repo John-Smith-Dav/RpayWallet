@@ -1,0 +1,114 @@
+input::-webkit-input-placeholder{   /* 使用webkit内核的浏览器 */
+  font-size: 15px !important;font-weight: 500 !important
+}
+input:-moz-placeholder{    /* Firefox版本4-18 */
+  font-size: 15px !important;font-weight: 500 !important
+}
+input::-moz-placeholder{    /* Firefox版本19+ */
+  font-size: 15px !important;font-weight: 500 !important
+}
+input:-ms-input-placeholder{   /* IE浏览器 */
+  font-size: 15px !important;font-weight: 500 !important
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+input, textarea{
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+}
+
+input::placeholder, textarea::placeholder{
+  color: #cccccc;
+  font-size: 12px;
+  font-weight: 500;
+}
+img {
+  border: none;
+}
+a {
+  text-decoration: none;
+  color: $d_font_black;
+}
+
+a:link, a:visited {
+}
+
+a:hover {
+}
+
+a, a:focus, button, input {
+  outline: none;
+  font-family: inherit;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+html {
+  overflow-y: auto;
+}
+body, html, #app {
+  font-family: "PingFang", "Microsoft Yahei", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  user-select: none;
+  background: $d_bg;
+  width: 100%;
+  height: 100%;
+}
+
+
+.scroll_content::-webkit-scrollbar {
+  width:0px;
+  height:0px;
+}
+.coloractive{
+  color:$d_font_black !important;
+}
+.up{
+  color: $d_font_up !important;
+}
+.down{
+  color: $d_font_down !important;
+}
+.buybg{
+  background: $d_bg_down !important;
+  border-radius: 5px;
+}
+.sellbg{
+  background: $d_bg_up !important;
+  border-radius: 5px;
+}
+.btn { //公共按钮 ，浮动在底部
+  width: 90%;
+ margin: 0 auto;
+ margin: 0 5%;
+ position: fixed;  left: 0;
+ bottom: 20px;
+ display: block;
+ line-height: 44px;
+ text-align: center;
+ background: $d_font_black;
+ border-radius: 22px;
+ color: $d_font_white;
+ height: 44px;
+}
+.btn-submit{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}

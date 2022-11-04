@@ -1,0 +1,85 @@
+<!-- 不使用了，以后删掉 -->
+<template>
+  <div>
+    <div class="content">
+      <div>
+        <van-row style="padding-top: 300px;">
+          <van-col span="24" style="text-align: center;padding-top: 10px;padding-left: 30px" >
+            <van-row>
+              <van-col span="5">
+                <img :src="imageUrl +　avatar" alt="" width="40px" height="40px" style="border-radius: 5px">
+              </van-col>
+              <van-col span="19" style="text-align: left;margin-top: 4px;font-size: 22px;font-weight: bold;letter-spacing:6px" v-if="!showUserNameInput">
+                {{ username }}
+              </van-col>
+              <van-col span="19" style="text-align: left;padding-right: 20px" v-if="showUserNameInput">
+                <van-field autofocus="autofocus" maxlength="15"
+                           v-model="username"
+                           style="background-color: #F0F0F0;font-size: 15px;font-weight: 600;border-radius: 5px"
+                           placeholder="输入手机号，登录RPay"
+                />
+              </van-col>
+            </van-row>
+          </van-col>
+        </van-row>
+        <van-row style="padding-top: 10px;text-align: center;">
+          <van-col span="24" style="text-align: center;padding-right: 15px;padding-left: 15px" >
+            <van-button type="primary"  style="border-radius: 10px;width: 100%" @click="goRegisterSms" >下一步</van-button>
+          </van-col>
+        </van-row>
+
+        <van-row style="padding-top: 25px;text-align: center;padding-left: 50px;padding-right: 50px;font-size: 14px">
+          <van-col span="8" style="text-align: center;" >
+            <span style="color: #1989fa">注册账号</span>
+          </van-col>
+          <van-col span="8" style="text-align: center;padding-right: 15px;padding-left: 15px" >
+            <span style="color: #1989fa">找回账号</span>
+          </van-col>
+          <van-col span="8">
+            <span style="color: #1989fa" @click="changeUsername">换个账号</span>
+          </van-col>
+        </van-row>
+
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import Const from '../plugins/const.js';
+export default {
+  data(){
+    return{
+      imageUrl : '',
+      avatar : '',
+      username: "",
+      showUserNameInput: false
+    }
+  },
+  mounted(){
+
+  },
+  created() {
+    this.imageUrl = Const.backDefaultServerUrl + '/api/file/image/';
+    this.avatar = this.getStorage(Const.localStorageKeyAvatar);
+    this.username = this.getStorage(Const.localStorageKeyUserName);
+  },
+  watch: {
+
+  },
+  methods:  {
+    goRegisterSms() {
+
+    },
+    changeUsername() {
+      this.showUserNameInput = true;
+      this.username = '';
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+
+
+</style>
